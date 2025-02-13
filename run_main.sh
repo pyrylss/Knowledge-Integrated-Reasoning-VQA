@@ -1,33 +1,17 @@
-#!/bin/bash -l
-#SBATCH --job-name=simple   # Job name
-#SBATCH --account=project_462000472
-#SBATCH --output=output_okvqa_val_%j.txt
-#SBATCH --error=errors_okvqa_val_%j.txt
-#SBATCH --partition=dev-g       # Partition (queue) name
-#SBATCH --ntasks=1              # One task (process)
-#SBATCH --ntasks-per-node=1     # 8 MPI ranks per node, 16 total (2x8)
-#SBATCH --gpus-per-node=1       # Allocate one gpu per MPI rank
-#SBATCH --time=1:00:00         # Run time (hh:mm:ss)
-
-
-module use /appl/local/csc/modulefiles/
-module load pytorch
-export PYTHONUSERBASE=/scratch/project_462000472/pyry/python_base
-
 python main.py \
     --dataset ok_vqa \
     --evaluation_set val \
     --train_annotations_path annotations/ok_vqa/train_annots_fixed.csv.zip \
     --val_annotations_path annotations/ok_vqa/val_annots_fixed.csv.zip \
     --test_annotations_path None \
-    --train_images_dir /scratch/project_462000472/pyry/prophet/datasets/coco2014/train2014/ \
-    --val_images_dir /scratch/project_462000472/pyry/prophet/datasets/coco2014/val2014/ \
+    --train_images_dir /datasets/coco2014/train2014/ \
+    --val_images_dir /datasets/coco2014/val2014/ \
     --test_images_dir None \
     --n_shots 10 \
     --k_ensemble 5 \
     --no_of_captions 9 \
     --examples_path /beit3_examples/ok_vqa/examples.json \
-    --llama_path /scratch/project_462000472/pyry/prophet/Llama-2-13b-hf \
+    --llama_path /Llama-2-13b-hf \
     --train_captions_path question_related_captions/ok_vqa/train_data_qr_captions_csv \
     --val_captions_path question_related_captions/ok_vqa/val_data_qr_captions_csv \
     --test_captions_path None \
@@ -35,7 +19,6 @@ python main.py \
     --blip_train_image_embedds_path blip_embedds/ok_vqa/blip_normalized_i_embedds/blip_train_image_embedds.csv.zip \
     --blip_val_question_embedds_path blip_embedds/ok_vqa/blip_normalized_q_embedds/blip_val_question_embedds.csv.zip \
     --blip_val_image_embedds_path blip_embedds/ok_vqa/blip_normalized_i_embedds/blip_val_image_embedds.csv.zip \
-    --promptcap_captions_dir_train /scratch/project_462000472/pyry/prophet/PromptCAP/okvqa_train_captions.json \
     --path_to_save_preds results/okvqa_val.csv
     
 # python main.py \
