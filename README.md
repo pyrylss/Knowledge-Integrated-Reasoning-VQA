@@ -14,9 +14,9 @@ pip install -r requirements.txt
 ---
 
 ### **Run the Code**
-Before running the code, you need to **download the LLaMA weights** and convert them to the **Hugging Face Transformers format**
+Before running the code, you need to download the LLaMA weights and convert them to the Hugging Face Transformers format
 
-To run the model, use the **`run_main.sh`** script:
+To run the model, use the `run_main.sh` script:
 
 ```bash
 python main.py \
@@ -50,7 +50,7 @@ python main.py \
 - The LLaMA model should be placed in the `meta-llama/Llama-2-13b-hf` directory.
 
 ## 🙌 Thanks & Acknowledgments
-The code in this repository is based on **[Simple](https://github.com/alexandrosXe/A-Simple-Baseline-For-Knowledge-Based-VQA)**, and is extended by fine-tuning a **retriever** to improve the knowledge retrieval process. The retrieved knowledge was then incorporated into **caption generation**. Additionally, BEiT-3 was fine-tuned for **in-context example selection**.  
+The code in this repository is based on [Simple](https://github.com/alexandrosXe/A-Simple-Baseline-For-Knowledge-Based-VQA), and is extended by fine-tuning a retriever to improve the knowledge retrieval process. The retrieved knowledge was then incorporated into caption generation. Additionally, BEiT-3 was fine-tuned for in-context example selection.  
 
 Many thanks to the authors for making their code publicly available.
 
