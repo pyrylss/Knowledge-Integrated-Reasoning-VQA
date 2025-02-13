@@ -46,3 +46,8 @@ python main.py \
 - Ensure you replace `/path_to_the_train_images/` and `/path_to_the_val_images/` with the actual paths to your dataset images.
 - The LLaMA model should be placed in the `meta-llama/Llama-2-13b-hf` directory.
 
+## 🙌 Thanks & Acknowledgments
+The code in this repository is based on **[Simple](https://github.com/alexandrosXe/A-Simple-Baseline-For-Knowledge-Based-VQA)**, and we extended it by fine-tuning a **retriever** to improve the knowledge retrieval process. The retrieved knowledge was then incorporated into **caption generation**. Additionally, we **fine-tuned BEiT-3** for **in-context example selection**.  
+
+Many thanks to the authors for making their code publicly available.
+
