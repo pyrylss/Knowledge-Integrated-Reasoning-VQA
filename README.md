@@ -1,5 +1,8 @@
 # Knowledge-Integrated-Reasoning-VQA
 
+![Description](framework.png)
+
+
 ## Install
 
 First, install the necessary dependencies:
