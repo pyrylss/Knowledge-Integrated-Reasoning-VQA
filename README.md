@@ -1,4 +1,4 @@
-# Knowledge-Integrated-Reasoning-VQA
+# Framework for VQA
 
 ![Description](framework.png)
 
