@@ -1,0 +1,9 @@
+NOTE: This module uses Singularity. Some commands execute inside the container
+(e.g. python3, pip3).
+
+This module has been installed by CSC.
+
+Documentation: https://docs.csc.fi/apps/pytorch/
+Support: https://docs.csc.fi/support/contact/
+
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]
