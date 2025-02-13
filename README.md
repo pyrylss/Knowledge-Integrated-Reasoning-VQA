@@ -29,7 +29,7 @@ python main.py \
     --k_ensemble 5 \
     --no_of_captions 9 \
     --examples_path Knowledge-Integrated-Reasoning-VQA/beit3_examples/ok_vqa/examples.json \
-    --llama_path /scratch/project_462000472/pyry/prophet/Llama-2-13b-hf \
+    --llama_path meta-llama/Llama-2-13b-hf \
     --train_captions_path question_related_captions/ok_vqa/train_data_qr_captions_csv \
     --val_captions_path question_related_captions/ok_vqa/val_data_qr_captions_csv \
     --test_captions_path None \
